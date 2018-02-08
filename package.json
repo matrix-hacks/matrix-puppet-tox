@@ -1,0 +1,23 @@
+{
+  "name": "matrix-puppet-tox",
+  "version": "0.0.0",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepare": "tsc",
+    "start": "DEBUG=matrix-puppet:* node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.7",
+    "matrix-puppet-bridge": "^2.0.0",
+    "node-ffi": "https://github.com/node-ffi/node-ffi",
+    "toxcore": "https://github.com/TokTok/js-toxcore-c"
+  },
+  "devDependencies": {
+    "typescript": "^2.3.4"
+  }
+}
