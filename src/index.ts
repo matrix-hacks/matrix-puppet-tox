@@ -55,7 +55,7 @@ export class Adapter extends ThirdPartyAdapter {
   sendMessage(id, text) {
     return this.client.sendMessage(text, id, false);
   }
-  sendImageMessage(id, data) {
-    return this.client.sendMessage('['+data.text+'] '+data.url, id, false);
+  getRoomByUser(uid) {
+    return this.client.getRoomByUser(uid);
   }
 };

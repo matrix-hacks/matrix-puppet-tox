@@ -66,4 +66,11 @@ export class ToxClient extends (EventEmitter as { new(): any; }) {
   getNameById(id) {
     return this.tox.getFriendNameSync(id).replace(/\0/g, '');
   }
+  getRoomByUser(user: string) {
+    return this.tox.getFriendByPublicKeyAsync(user).then(f => {
+      return user;
+    }).catch(e => {
+      return '';
+    });
+  }
 }
